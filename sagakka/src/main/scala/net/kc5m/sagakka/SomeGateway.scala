@@ -1,6 +1,6 @@
 package net.kc5m.sagakka
 
-import akka.actor.typed.{ActorRef, Behavior}
+import akka.actor.typed.Behavior
 import akka.actor.typed.scaladsl.Behaviors
 
 object SomeGateway {

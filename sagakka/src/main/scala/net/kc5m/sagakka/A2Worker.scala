@@ -13,9 +13,10 @@ object A2Worker {
       Random.nextInt(10) match {
         case x if x < 8 =>
           Main.proxy ! SomeGateway.Increment
-          msg.replyTo ! A2Ok(id = msg.id, result = 0)
+          msg.replyTo ! Orchestrator.A2Ok(id = msg.id, result = 0)
         case _ =>
-          msg.replyTo ! A2Ng(id = msg.id, new Exception("A2死にました"))
+          ctx.log.warn("BOOM! at A2")
+          msg.replyTo ! Orchestrator.A2Ng(id = msg.id, new Exception("A2死にました"))
       }
 
       Behaviors.same

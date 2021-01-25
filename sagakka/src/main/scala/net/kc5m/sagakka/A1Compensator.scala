@@ -8,7 +8,7 @@ object A1Compensator {
     Behaviors.receive { (ctx, msg) =>
       ctx.log.info("id: {}", msg.id)
       Main.proxy ! SomeGateway.Decrement
-      msg.replyTo ! A1CompensateOk(id = msg.id, result = "ok")
+      msg.replyTo ! Orchestrator.A1CompensateOk(id = msg.id, result = "ok")
       Behaviors.same
     }
 }

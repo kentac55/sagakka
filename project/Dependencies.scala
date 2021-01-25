@@ -15,6 +15,9 @@ object Dependencies {
   val akkaSlf4j = "com.typesafe.akka" %% "akka-slf4j" % akkaV
   val akkaStream = "com.typesafe.akka" %% "akka-stream-typed" % akkaV
   val akkaTestKit = "com.typesafe.akka" %% "akka-actor-testkit-typed" % akkaV
+  val akkaPersistence = "com.typesafe.akka" %% "akka-persistence-typed" % akkaV
+  val akkaPersistenceTestKit = "com.typesafe.akka" %% "akka-persistence-testkit" % akkaV
+  val akkaPersistenceInMemory = "com.github.dnvriend" %% "akka-persistence-inmemory" % "2.5.15.2"
   val alpakka = "com.lightbend.akka" %% "akka-stream-alpakka-amqp" % "2.0.2"
   val circeCore = "io.circe" %% "circe-core" % circeVersion
   val circeGeneric = "io.circe" %% "circe-generic" % circeVersion

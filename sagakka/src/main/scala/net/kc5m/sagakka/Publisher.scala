@@ -16,9 +16,7 @@ import akka.stream.alpakka.amqp.{
 }
 import akka.stream.scaladsl.{Flow, Sink, Source}
 import akka.util.ByteString
-import io.circe._
 import io.circe.generic.auto._
-import io.circe.parser._
 import io.circe.syntax._
 
 object Publisher {

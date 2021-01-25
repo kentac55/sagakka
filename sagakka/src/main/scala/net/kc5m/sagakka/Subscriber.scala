@@ -1,5 +1,7 @@
 package net.kc5m.sagakka
 
+import scala.concurrent.duration.DurationInt
+
 import akka.NotUsed
 import akka.actor.typed.Behavior
 import akka.actor.typed.scaladsl.Behaviors
@@ -12,8 +14,6 @@ import io.circe._
 import io.circe.generic.auto._
 import io.circe.parser._
 import io.circe.syntax._
-
-import scala.concurrent.duration.DurationInt
 
 object Subscriber {
 

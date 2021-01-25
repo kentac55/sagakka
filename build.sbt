@@ -5,6 +5,7 @@ name := "akka-saga"
 scalaVersion in ThisBuild := "2.13.4"
 organization in ThisBuild := "net.kc5m"
 version in ThisBuild := "0.1"
+resolvers += Resolver.bintrayRepo("dnvriend", "maven")
 
 lazy val settings = commonSettings ++ scalafmtSettings ++ wartremoverSettings
 
@@ -38,6 +39,8 @@ lazy val commonDeps = Seq(
   akka,
   akkaCluster,
   akkaStream,
+  akkaPersistence,
+  akkaPersistenceInMemory,
   alpakka,
   circeCore,
   circeGeneric,
