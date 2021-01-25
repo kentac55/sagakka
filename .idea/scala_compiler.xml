@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="akka-saga">
+      <option name="implicitConversions" value="true" />
+      <option name="higherKinds" value="true" />
+      <option name="existentials" value="true" />
+      <option name="deprecationWarnings" value="true" />
+      <option name="uncheckedWarnings" value="true" />
+      <option name="featureWarnings" value="true" />
+      <parameters>
+        <parameter value="-encoding" />
+        <parameter value="UTF-8" />
+        <parameter value="-Xfatal-warnings" />
+        <parameter value="-Xlint" />
+        <parameter value="-Wunused:imports,params" />
+      </parameters>
+      <plugins>
+        <plugin path="target/compiler_plugins/supersafe_2.13.4-1.1.12.jar" />
+        <plugin path="target/compiler_plugins/wartremover_2.13.4-2.4.13.jar" />
+      </plugins>
+    </profile>
+    <profile name="sbt 2" modules="saga">
+      <parameters>
+        <parameter value="-P:wartremover:cp:file:target/compiler_plugins/wartremover-contrib_2.13.4-1.3.11.jar" />
+      </parameters>
+      <plugins>
+        <plugin path="target/compiler_plugins/supersafe_2.13.4-1.1.12.jar" />
+        <plugin path="target/compiler_plugins/wartremover_2.13.4-2.4.13.jar" />
+      </plugins>
+    </profile>
+    <profile name="sbt 3" modules="sagakka">
+      <plugins>
+        <plugin path="target/compiler_plugins/supersafe_2.13.4-1.1.12.jar" />
+        <plugin path="target/compiler_plugins/wartremover_2.13.4-2.4.13.jar" />
+      </plugins>
+    </profile>
+  </component>
+</project>
